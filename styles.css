@@ -1,16 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 body{
     min-height: 100vh;
+    background-color: #747474;
+    font-family: 'Inter', sans-serif;
+}
+
+header{
+    background-color: #fff;
 }
 
 #sideBar{
-    width: 20%;
-    background-color: rgb(227, 227, 227);
+    width: 18%;
+    background-color: #ffffff;
     height: 100vh;
     overflow: scroll;
 }
 
 #imageContainer{
-    width: 80%;
+    width: 82%;
     min-height: 500px;
     display: flex;
     flex-wrap: wrap;
@@ -19,19 +27,19 @@ body{
 
 .subbreeds {
     /* padding: 10px; */
-    border: 1px solid #ddd;
+    /* border: 1px solid #ddd; */
     margin-top: 0px;
-    background-color: #aed5ff;;
+    background-color: #ffffff;;
 }
 
 .subbreeds a {
     display: block;
     text-decoration: none;
-    color: #002d5d;
+    color: #303030;
 }
 
 .subbreeds a:hover {
-    background-color: rgb(160, 198, 255);
+    color: #0969da;
 }
 
 .split-btn-container {
@@ -48,6 +56,9 @@ body{
 
 .mainBtn{
     text-align: left;
+    border-radius: 0px!important;
+    font-weight: 400;
+    color:#313131
 }
 
 #loader{
@@ -58,4 +69,14 @@ body{
 
 #second-btn{
     border-left: 1px solid #9e9e9e
+}
+
+#mainSection{
+    background-color: #bfbfbf;
+}
+
+#mainSection button:hover{
+    color: #0077ff;
+
+   
 }

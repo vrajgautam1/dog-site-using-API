@@ -20,16 +20,18 @@ const sideBarCreate = () => {
             for (let dogBreed in DogListObj) {
                 let subBreedList = DogListObj[dogBreed];
                 let dropdownHTML = "";
-
+                
+                let dogName = dogBreed[0].toUpperCase() + dogBreed.slice(1)
+                
                 if (subBreedList.length >= 1) {
                     // Create dropdown structure
                     dropdownHTML += `
-        <div class="mt-2">
+        <div class="">
             <div class="btn-group w-100">
 
-                <button type="button" class="btn btn-primary main-btn mainBtn" onclick="getDogBreedImage('${dogBreed}')">${dogBreed}</button>
+                <button type="button" class="btn main-btn mainBtn" onclick="getDogBreedImage('${dogBreed}')">${dogName}</button>
 
-                <button type="button" class="btn btn-primary rounded-end dropdown-toggle sub-btn"
+                <button type="button" class="btn rounded-end dropdown-toggle sub-btn"
                 onclick="toggleSubbreeds('${dogBreed}')" id="second-btn"></button>
             </div>
             <!-- Subbreeds Div -->
@@ -37,14 +39,15 @@ const sideBarCreate = () => {
                 <div class="d-flex flex-column gap-1 py-1">`;
                     // Add sub-breeds as anchor tags
                     for (let subBreed of subBreedList) {
-                        dropdownHTML += `<a href="#" class="ps-4 py-1" onclick="getDogSubBreedImage('${subBreed}', '${dogBreed}')">${subBreed}</a>`;
+                        let dogSubName = subBreed[0].toUpperCase() + subBreed.slice(1);
+                        dropdownHTML += `<a href="#" class="ps-4 py-1" onclick="getDogSubBreedImage('${subBreed}', '${dogBreed}')">${dogSubName}</a>`;
                     }
 
                     dropdownHTML += `</div></div></div>`
                     sideBar.innerHTML += dropdownHTML;
                 } else {
                     // Add a button for breeds without sub-breeds
-                    sideBar.innerHTML += `<button type="button" class="btn btn-primary w-100 mt-2 mainBtn" onclick="getDogBreedImage('${dogBreed}')">${dogBreed}</button>`;
+                    sideBar.innerHTML += `<button type="button" class="btn  w-100 mainBtn" onclick="getDogBreedImage('${dogBreed}')">${dogName}</button>`;
                 }
             }
         });
