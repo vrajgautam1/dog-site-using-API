@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Split Button Example</title>
+    <style>
+        .subbreeds {
+            border: 1px solid #ddd;
+            background-color: #aed5ff;
+        }
+
+        .subbreeds a {
+            text-decoration: none;
+            color: #002d5d;
+        }
+
+        .subbreeds a:hover {
+            background-color: rgb(160, 198, 255);
+        }
+
+        .main-btn {
+            width: 80%;
+        }
+
+        .sub-btn {
+            width: 20%;
+        }
+
+        .mainBtn{
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-4 w-25">
+        <!-- Split Button -->
+        <div>
+            <div class="btn-group w-100">
+                <button type="button" class="btn btn-primary main-btn mainBtn">BreedName</button>
+                <button type="button" class="btn btn-primary rounded-end dropdown-toggle sub-btn"
+                    onclick="toggleSubbreeds()"></button>
+            </div>
+
+            <!-- Subbreeds Div -->
+            <div id="subbreeds" class="subbreeds d-none">
+                <div class="d-flex flex-column gap-1 py-1">
+                    <a href="#" class="ps-2">Subbreed 1</a>
+                    <a href="#" class="ps-2">Subbreed 2</a>
+                    <a href="#" class="ps-2">Subbreed 3</a>
+                </div>
+            </div>
+        </div>
+
+        <button type="button" class="btn btn-primary w-100 mt-2 mainBtn">Primary</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+
+    <script>
+        // Toggle Subbreeds Visibility
+        function toggleSubbreeds() {
+            const subbreedsDiv = document.getElementById('subbreeds');
+            subbreedsDiv.classList.toggle('d-none');
+        }
+
+        
+    </script>
+</body>
+
+</html>

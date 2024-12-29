@@ -1,0 +1,61 @@
+body{
+    min-height: 100vh;
+}
+
+#sideBar{
+    width: 20%;
+    background-color: rgb(227, 227, 227);
+    height: 100vh;
+    overflow: scroll;
+}
+
+#imageContainer{
+    width: 80%;
+    min-height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.subbreeds {
+    /* padding: 10px; */
+    border: 1px solid #ddd;
+    margin-top: 0px;
+    background-color: #aed5ff;;
+}
+
+.subbreeds a {
+    display: block;
+    text-decoration: none;
+    color: #002d5d;
+}
+
+.subbreeds a:hover {
+    background-color: rgb(160, 198, 255);
+}
+
+.split-btn-container {
+    margin-bottom: 15px;
+}
+
+.main-btn{
+    width: 80%;
+}
+
+.sub-btn{
+    width: 20%;
+}
+
+.mainBtn{
+    text-align: left;
+}
+
+#loader{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+#second-btn{
+    border-left: 1px solid #9e9e9e
+}
